@@ -33,23 +33,23 @@
           </a>
           <nav class="nav-conteiner">
             <ul class="links-list">
-              <li><a href="./index.html" class="link-item">Студія</a></li>
+              <li class="links-list-item"><a href="./index.html" class="link-item hover-focus-transition current-page-studio">Студія</a></li>
               <li>
-                <a href="./portfolio.html" class="link-item">Портфоліо</a>
+                <a href="./portfolio.html" class="link-item hover-focus-transition">Портфоліо</a>
               </li>
-              <li><a href="" class="link-item">Контакти</a></li>
+              <li class="links-list-item"><a href="" class="link-item hover-focus-transition">Контакти</a></li>
             </ul>
           </nav>
           <div class="adresses">
             <div class="email-adress">
-              <a href="mailto:info@devstudio.com" class="header-adress">
-                <svg class="header-mail" width="16" height="12">
+              <a href="mailto:info@devstudio.com" class="header-adress hover-focus-transition">
+                <svg class="header-mail " width="16" height="12">
                   <use href="./images/svg/symbol-defs.svg#icon-mail"></use>
                 </svg>
                 info@devstudio.com
               </a>
             </div>
-            <a href="tel:+380961111111" class="header-adress">
+            <a href="tel:+380961111111" class="header-adress hover-focus-transition">
               <svg class="header-smartphone" width="10" height="16">
                 <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
               </svg>
@@ -66,7 +66,7 @@
         <section class="hero">
           <div class="container">
             <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-            <button type="button" class="hero-button">Замовити послугу</button>
+            <button type="button" class="hero-button" data-modal-open>Замовити послугу</button>
           </div>
         </section>
 <!-- -----HERO----- -->
@@ -135,27 +135,42 @@
             </h2>
             <ul class="responsibilities-list container">
               <li class="responsibilities-item">
-                <img
-                  width="370"
-                  alt="працівник_з_ноутбуком"
-                  src="./images/index/responsibilities/close-up-image.jpg"
-                />
+                <div class="responsisbilities-thumb">
+                  <img
+                    width="370"
+                    alt="працівник_з_ноутбуком"
+                    src="./images/index/responsibilities/close-up-image.jpg"
+                  />
+                  <div class="responsibilities-overlay">
+                    <p class="responsibilities-overlay-txt">Десктопні додатки</p>
+                  </div>
+                </div>
               </li>
 
               <li class="responsibilities-item">
-                <img
-                  width="370"
-                  alt="працює_над_адаптивністю"
-                  src="./images/index/responsibilities/web-ui-designers.jpg"
-                />
+                <div class="responsisbilities-thumb">
+                  <img
+                    width="370"
+                    alt="працює_над_адаптивністю"
+                    src="./images/index/responsibilities/web-ui-designers.jpg"
+                  />
+                  <div class="responsibilities-overlay">
+                    <p class="responsibilities-overlay-txt">Мобільні додатки</p>
+                  </div>
+                </div>
               </li>
 
               <li class="responsibilities-item">
-                <img
-                  width="370"
-                  alt="планшет_з_палітрою"
-                  src="./images/index/responsibilities/creative-artist.jpg"
-                />
+                <div class="responsisbilities-thumb">
+                  <img
+                    width="370"
+                    alt="планшет_з_палітрою"
+                    src="./images/index/responsibilities/creative-artist.jpg"
+                  />
+                  <div class="responsibilities-overlay">
+                    <p class="responsibilities-overlay-txt">Дизайнерські рішення</p>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -174,7 +189,7 @@
                 <p class="position">Product Designer</p>
                 <ul class="socials-list">
                   <li class="socials-item">
-                    <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="our-team-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-instagram"></use>
                       </svg>
@@ -182,7 +197,7 @@
                   </li>
 
                   <li class="socials-item">
-                    <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">              
+                    <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">              
                         <svg class="our-team-svg" width="20" height="20">
                           <use href="./images/svg/symbol-defs.svg#icon-twitter"></use>
                         </svg>       
@@ -190,7 +205,7 @@
                   </li>
 
                   <li class="socials-item">
-                    <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">        
+                    <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">        
                         <svg class="our-team-svg" width="20" height="20">
                           <use href="./images/svg/symbol-defs.svg#icon-facebook"></use>
                         </svg>
@@ -198,7 +213,7 @@
                   </li>
 
                   <li class="socials-item">
-                    <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                         <svg class="our-team-svg" width="20" height="20">
                           <use href="./images/svg/symbol-defs.svg#icon-linkedin"></use>
                         </svg>
@@ -218,7 +233,7 @@
                 <p p class="position">Frontend Developer</p>
                 <ul class="socials-list">
                   <li class="socials-item">
-                    <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="our-team-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-instagram"></use>
                       </svg>
@@ -226,7 +241,7 @@
                   </li>
                 
                   <li class="socials-item">
-                    <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="our-team-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-twitter"></use>
                       </svg>
@@ -234,7 +249,7 @@
                   </li>
                 
                   <li class="socials-item">
-                    <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="our-team-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-facebook"></use>
                       </svg>
@@ -242,7 +257,7 @@
                   </li>
                 
                   <li class="socials-item">
-                    <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="our-team-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-linkedin"></use>
                       </svg>
@@ -262,7 +277,7 @@
                 <p p class="position">Marketing</p>
               <ul class="socials-list">
                 <li class="socials-item">
-                  <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                  <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                     <svg class="our-team-svg" width="20" height="20">
                       <use href="./images/svg/symbol-defs.svg#icon-instagram"></use>
                     </svg>
@@ -270,7 +285,7 @@
                 </li>
               
                 <li class="socials-item">
-                  <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                  <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                     <svg class="our-team-svg" width="20" height="20">
                       <use href="./images/svg/symbol-defs.svg#icon-twitter"></use>
                     </svg>
@@ -278,7 +293,7 @@
                 </li>
               
                 <li class="socials-item">
-                  <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                  <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                     <svg class="our-team-svg" width="20" height="20">
                       <use href="./images/svg/symbol-defs.svg#icon-facebook"></use>
                     </svg>
@@ -286,7 +301,7 @@
                 </li>
               
                 <li class="socials-item">
-                  <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                  <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                     <svg class="our-team-svg" width="20" height="20">
                       <use href="./images/svg/symbol-defs.svg#icon-linkedin"></use>
                     </svg>
@@ -306,7 +321,7 @@
                 <p p class="position">UI Designer</p>
                 <ul class="socials-list">
                   <li class="socials-item">
-                    <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="our-team-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-instagram"></use>
                       </svg>
@@ -314,7 +329,7 @@
                   </li>
                 
                   <li class="socials-item">
-                    <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="our-team-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-twitter"></use>
                       </svg>
@@ -322,7 +337,7 @@
                   </li>
                 
                   <li class="socials-item">
-                    <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="our-team-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-facebook"></use>
                       </svg>
@@ -330,7 +345,7 @@
                   </li>
                 
                   <li class="socials-item">
-                    <a class="our-team-href" href="http://" target="_blank" rel="noopener noreferrer">
+                    <a class="our-team-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="our-team-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-linkedin"></use>
                       </svg>
@@ -338,6 +353,7 @@
                   </li>
                 
                 </ul>
+              </li>
           </div>
         </section>
 
@@ -347,42 +363,42 @@
             <h2 class="properties-titles">Постійні клієнти</h2>
             <ul class="customers-list">
               <li class="customers-item">
-                <a class="customers-href" href="http://" target="_blank" rel="noopener noreferrer">
+                <a class="customers-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                     <svg class="customers-svg" width="106" height="60">
                       <use href="./images/svg/symbol-defs.svg#icon-ya-co"></use>
                     </svg>
                 </a>
               </li>
               <li class="customers-item">
-                <a class="customers-href" href="http://" target="_blank" rel="noopener noreferrer">
+                <a class="customers-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                     <svg class="customers-svg" width="106" height="60">
                       <use href="./images/svg/symbol-defs.svg#icon-tag-line-here"></use>
                     </svg>
                 </a>
               </li>
               <li class="customers-item">
-                <a class="customers-href" href="http://" target="_blank" rel="noopener noreferrer">
+                <a class="customers-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                     <svg class="customers-svg" width="106" height="60">
                       <use href="./images/svg/symbol-defs.svg#icon-company"></use>
                     </svg>
                 </a>
               </li>
               <li class="customers-item">
-                <a class="customers-href" href="http://" target="_blank" rel="noopener noreferrer">
+                <a class="customers-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                     <svg class="customers-svg" width="106" height="60">
                       <use href="./images/svg/symbol-defs.svg#icon-fosters-peters"></use>
                     </svg>
                 </a>
               </li>
               <li class="customers-item">
-                <a class="customers-href" href="http://" target="_blank" rel="noopener noreferrer">
+                <a class="customers-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                     <svg class="customers-svg" width="106" height="60">
                       <use href="./images/svg/symbol-defs.svg#icon-brand"></use>
                     </svg>
                 </a>
               </li>
               <li class="customers-item">
-                <a class="customers-href" href="http://" target="_blank" rel="noopener noreferrer">
+                <a class="customers-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                     <svg class="customers-svg" width="106" height="60">
                       <use href="./images/svg/symbol-defs.svg#icon-tag-line"></use>
                     </svg>
@@ -419,7 +435,7 @@
               <h3 class="footer-title">Приєднуйтесь</h3>
               <ul class="footer-soc-list">
                 <li class="footer-soc-item">
-                  <a class="footer-href" href="http://" target="_blank" rel="noopener noreferrer">
+                  <a class="footer-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="footer-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-instagram"></use>
                       </svg>
@@ -427,7 +443,7 @@
                 </li>
 
                 <li class="footer-soc-item">
-                  <a class="footer-href" href="http://" target="_blank" rel="noopener noreferrer">
+                  <a class="footer-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="footer-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-twitter"></use>
                       </svg>
@@ -435,7 +451,7 @@
                 </li>
 
                 <li class="footer-soc-item">
-                  <a class="footer-href" href="http://" target="_blank" rel="noopener noreferrer">
+                  <a class="footer-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="footer-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-facebook"></use>
                       </svg>
@@ -443,7 +459,7 @@
                 </li>
 
                 <li class="footer-soc-item">
-                  <a class="footer-href" href="http://" target="_blank" rel="noopener noreferrer">
+                  <a class="footer-href hover-focus-transition" href="http://" target="_blank" rel="noopener noreferrer">
                       <svg class="footer-svg" width="20" height="20">
                         <use href="./images/svg/symbol-defs.svg#icon-linkedin"></use>
                       </svg>
@@ -456,6 +472,23 @@
         </div>
       </footer>
 <!-- -----------------------FOOTER--------------------- -->
+
+<!-- -----------------------MODAL WINDOW--------------------- -->
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="modal-close-button" data-modal-close>
+            <svg class="" width="" height="">
+              <use href="./images/svg/symbol-defs.svg#modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+<!-- -----------------------MODAL WINDOW--------------------- -->
+
     </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

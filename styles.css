@@ -8,6 +8,8 @@
   --filtres-btn-color: #f5f4fa;
   --defoult-space-between: 30px;
   --items: 4;
+  --header-underline-width: 100%;
+  --fast-anim:150ms;
 }
 
 /* ------------------------------------COMMON STYLES------------------------------------ */
@@ -51,6 +53,11 @@ a {
   text-decoration: none;
 }
 
+.hover-focus-transition{
+  transition-duration: var(--fast-anim);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, border-color, box-shadow ;
+}
 /* ------------------------------------COMMON STYLES------------------------------------ */
 
 /* ------------------------------------HEADER FOOTER------------------------------------ */
@@ -105,6 +112,37 @@ a {
   list-style-position: inside;
   padding: 0;
   margin: 0;
+  
+}
+
+.links-list-item{
+  position: relative;
+}
+
+.current-page-studio::after{
+  content: '';
+  display: block;
+  border-radius: 2px;
+  width:var(--header-underline-width);
+  height: 4px;
+  bottom: -32px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--main-links-color);
+  position: absolute;
+}
+
+.current-page-portfolio::after{
+  content: '';
+  display: block;
+  border-radius: 2px;
+  width: var(--header-underline-width);
+  height: 4px;
+  bottom: -32px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--main-links-color);
+  position: absolute;
 }
 
 .link-item {
@@ -277,7 +315,7 @@ a {
       url(./images/index/hero/bg-hero-img.jpg);
   background-repeat: no-repeat; 
   background-position: center;
-  background-size: cover  ;
+  background-size: cover ;
 }
 
 .hero-title {
@@ -306,6 +344,7 @@ a {
   background: var(--main-links-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  cursor: pointer;
   /* btn txt */
   font-style: normal;
   font-weight: 700;
@@ -381,6 +420,36 @@ a {
 
 .responsibilities-item {
   height: 294px;
+}
+
+.responsisbilities-thumb {
+  position: relative;
+}
+
+.responsibilities-overlay {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 27px;
+  width: 100%;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.responsibilities-overlay-txt {
+
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
 }
 
 /* RESPONSIBILITIES */
@@ -587,11 +656,47 @@ a {
 
 .product-item {
   border: #eeeeee solid 1px;
-  width: 370px;
+  width: 370px;  
+}
+
+.product-thumb{
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay{
+  position: absolute;
+  top:0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform:translateY(100%);
+  opacity: 0;
+
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  user-select: none;
+
+  padding: 0 24px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
 }
 
 .product-item:hover, .product-item:focus{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.product-item:hover .overlay{
+  transform: translateY(0);
+  opacity: 1;
+  transition-duration: var(--fast-anim);
+  transition-property: opacity, transform;
 }
 
 .product-text {
@@ -618,3 +723,61 @@ a {
 /* PRODUCTS */
 
 /* ------------------------------------PORTFOLIO------------------------------------ */
+
+/* -----------------------MODAL WINDOW--------------------- */
+
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition:background-color, var(--fast-anim);
+}
+
+.is-hidden{
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal{
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 528px;
+  min-height: 580px;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: transform, opacity, var(--fast-anim);
+
+}
+
+.backdrop.is-hidden .modal{
+  transform: translateX(-50%) translateY(-70%);
+  opacity: 0;
+
+}
+
+.modal-close-button{
+  padding: 4px;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  border-radius: 50%;
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+
+}
+
+/* -----------------------MODAL WINDOW--------------------- */
